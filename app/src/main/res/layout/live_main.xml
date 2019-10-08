@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.mirage.live.widget.HiveviewVideoView
+        android:id="@+id/video"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@android:color/holo_blue_dark"
+        app:indicatorName="BallTrianglePathIndicator" />
+
+
+    <ImageView
+        android:id="@+id/stop_status"
+        android:background="@drawable/player_pause"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:visibility="visible">
+
+        <!--播放当前时间-->
+        <TextView
+            android:id="@+id/playbackCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText"
+            tools:text="1:06:29" />
+
+        <!--进度条-->
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/playbackSeekBar"
+            style="@style/Widget.AppCompat.SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="8dp"
+            tools:progress="25"
+            tools:secondaryProgress="50" />
+
+        <!--播放终止时间-->
+        <TextView
+            android:id="@+id/playbackEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText"
+            tools:text="1:23:49" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+/.idea/
+/build/
+.gradle/
+*.iml
+#crash.txt
+local.properties
+.DS_Store
+app/libs/.DS_Store
+app/src/main/java/com/hiveview/mqtt/.DS_Store
